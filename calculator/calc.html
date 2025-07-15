@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <!--linking to css file-->
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+   
+    <div class="container">
+        <div class="calculator">
+            <form name="calc">
+                <div class="display">
+                    <input type="text" name="display" id="display" readonly  >
+                </div>
+                <!--buttons inside the calculator-->
+                <div>
+                    <input type="button" value="AC" onclick="clearDisplay()" class="button">
+                    <input type="button" value="DE" onclick="deleteLast()"class="button">
+                    <input type="button" value="." onclick="appendToDisplay('.')">
+                    <input type="button" value="/" onclick="appendToDisplay('/')">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="appendToDisplay('7')">
+                    <input type="button" value="8" onclick="appendToDisplay('8')">
+                    <input type="button" value="9" onclick="appendToDisplay('9')">
+                    <input type="button" value="*" onclick="appendToDisplay('*')"class="button">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="appendToDisplay('4')">
+                    <input type="button" value="5" onclick="appendToDisplay('5')">
+                    <input type="button" value="6" onclick="appendToDisplay('6')">
+                    <input type="button" value="-" onclick="appendToDisplay('-')"class="button">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="appendToDisplay('1')">
+                    <input type="button" value="2" onclick="appendToDisplay('2')">
+                    <input type="button" value="3" onclick="appendToDisplay('3')">
+                    <input type="button" value="+" onclick="appendToDisplay('+')"class="button">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="appendToDisplay('00')">
+                    <input type="button" value="0" onclick="appendToDisplay('0')">
+                    <input type="button" value="=" class="equal" onclick="calculateResult()">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--linking to the javascript file-->
+    <script src="calc.js"></script>
+</body>
+</html>
